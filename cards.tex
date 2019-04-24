@@ -1,0 +1,83 @@
+%!TEX program = lualatex
+
+\documentclass[a4paper,oneside]{memoir}
+\input{format/_common.tex}
+\input{format/_shortcuts.tex}
+
+% Draw cards in portrait format
+\input{format/blackportrait.tex}
+% \input{format/setcolorportrait.tex}
+% Draw cards in landscape format
+% \input{format/blacklandscape.tex}
+% \input{format/setcolorlandscape.tex}
+
+% Colors for basic elements
+\definecolor{framebg}{RGB}{0,0,0}
+\definecolor{contentbg}{RGB}{255,255,255}
+
+% Colors to distinguish the extensions
+\definecolor{basicgame}{RGB}{152,170,149}
+\definecolor{intrigue}{RGB}{225,106,85}
+\definecolor{seaside}{RGB}{100,145,189}
+\definecolor{alchemy}{RGB}{255,245,158}
+\definecolor{prosperity}{RGB}{125,195,170}
+\definecolor{cornucopia}{RGB}{154,199,119}
+\definecolor{hinterlands}{RGB}{175,159,104}
+\definecolor{darkages}{RGB}{198,58,69}
+\definecolor{guilds}{RGB}{225,111,159}
+\definecolor{adventures}{RGB}{199,186,152}
+\definecolor{empires}{RGB}{105,181,103}
+\definecolor{nocturne}{RGB}{59,75,189}
+\definecolor{renaissance}{RGB}{49,174,188}
+\definecolor{promo}{RGB}{241,177,59}
+
+% Global variables
+\newboolean{showSetIcon} 
+\setboolean{showSetIcon}{true} % Toggle set icons on cards
+
+% Basic settings for this card set will be overwritten on each card set
+\newcommand{\cardcolor}{}
+\newcommand{\cardextension}{}
+\newcommand{\cardextensiontitle}{}
+\newcommand{\seticon}{}
+
+\renewcommand\thesection{\arabic{section}}
+
+\begin{document}
+	\begin{center}
+		\begin{minipage}{0.75\textwidth}
+			\Huge 
+			Dominion Kartentrenner
+			\normalsize
+			\tableofcontents
+		\end{minipage}
+	    	
+	    \input{sets/de/basecards.tex}
+	    \input{sets/de/basic1HIG2008.tex}
+		\input{sets/de/basic1SpecialEditionRGG2013.tex}
+		\input{sets/de/basecards.tex}
+		\input{sets/de/basic2RGG2017.tex}
+		\input{sets/de/intrigueHIG2009.tex}
+		\input{sets/de/intrigueRGG2014.tex}
+	    % \input{sets/de/intrigueRG017.tex}
+	    \input{sets/de/basicintrigueextensionRGG2017.tex} 
+	    \input{sets/de/seasideHIG2009.tex}
+	    \input{sets/de/seasideRGG2014.tex}
+	    \input{sets/de/alchemyHIG2010.tex}
+		\input{sets/de/alchemyRGG2015.tex}
+	    \input{sets/de/prosperityHIG2010.tex}
+	    \input{sets/de/prosperityRGG2016.tex}
+	    \input{sets/de/cornucopiaHIG2011.tex}
+	    \input{sets/de/cornucopiaRGG2014.tex}
+	    \input{sets/de/hinterlandsHIG2011.tex}
+	    \input{sets/de/darkagesHIG2012.tex}
+		\input{sets/de/darkagesRGG2019.tex}
+	    \input{sets/de/guildsRGG2013.tex}
+	    \input{sets/de/adventuresRGG2015.tex}
+	    \input{sets/de/empiresRGG2016.tex}
+		\input{sets/de/nocturneRGG2018.tex}
+		\input{sets/de/renaissanceRGG2019.tex}
+	    \input{sets/de/promotion.tex}
+		\input{sets/de/template.tex}
+	\end{center}
+\end{document}
